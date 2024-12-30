@@ -9,11 +9,24 @@
         <a href="{% url 'profile' %}" style="text-decoration:none;padding:5rem;color:white">Profile</a>
     </div>
     <div class="con" style="background: linear-gradient(135deg, #ffa500, #ff1493);"> <!-- Orange to Pink -->
-        About
+        <a href="{% url 'about' %}" style="text-decoration:none;padding:5rem;color:white">About</a>
     </div>
 </div>
 
 <style>
+    body{
+
+        background-image: url('/static/edu.jpg');/* Education-themed image */
+        background-size: cover; /* Ensure the image covers the entire viewport */
+        background-position: center; /* Center the background image */
+        background-attachment: fixed; /* Keep the image fixed while scrolling */
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+
+    }
+
     .container {
         display: flex;
         flex-wrap: wrap; /* Allow wrapping when the window shrinks */

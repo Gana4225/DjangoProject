@@ -1,6 +1,139 @@
 {% extends 'master.html' %}
 {% block content %}
 
-<h2>hello this is profile section</h2>
+
+
+ <div class="profile-container">
+        <div class="profile-header">
+            <div>
+                <h1>{{data1.name}}</h1>
+                <p>Computer Science Student at Avanthi University</p>
+                <p>Class of 2026</p>
+            </div>
+        </div>
+
+        <div class="details">
+            <div>
+                <h3>About Me</h3>
+                <p>Passionate about technology and software development. I love coding, problem-solving, and exploring new tech trends. In my free time, I enjoy reading, gaming, and contributing to open-source projects.</p>
+            </div>
+
+            <div>
+                <h3>Academic Information</h3>
+                <p><strong>Major:</strong> Computer Science</p>
+                <p><strong>Dept:</strong> {{data1.branch}}</p>
+                <p><strong>GPA:</strong> 3.8/4.0</p>
+                <p><strong>Roll No:</strong> {{data1.rn}}</p>
+                <p><strong>University:</strong> Avanthi University</p>
+            </div>
+
+            <div>
+                <h3>Skills</h3>
+                <ul>
+                    <li>Programming: Python, Java, C++</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Databases: MySQL, MongoDB</li>
+                    <li>Version Control: Git, GitHub</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact Information</h3>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:ch.ganapathi225@gmail.com">ch.ganapathi225@gmail.com</a></p>
+                    <p><strong>Phone:</strong>+91 9945645287</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/Gana</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-header h1 {
+            font-size: 28px;
+            color: #333;
+            margin: 0;
+        }
+
+        .profile-header p {
+            font-size: 18px;
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .details div {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .details h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
 
 {% endblock %}

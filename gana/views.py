@@ -37,4 +37,8 @@ def generate_pdf(request):
 
 
 def profile(request):
-    return render(request, "profile.html")
+    data = student.objects.get(id=1)
+    return render(request, "profile.html",{'data1':data})
+
+def about(request):
+    return render(request, "about.html")
