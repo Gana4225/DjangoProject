@@ -1,0 +1,67 @@
+{% extends 'master.html' %}
+{% block content %}
+
+<div class="container">
+    <div class="con" style="background: linear-gradient(135deg, #ff6f61, #ffcc00);"> <!-- Coral to Yellow -->
+        <a href="{% url 'lly' %}" style="text-decoration:none;padding:5rem;color:white">Result</a>
+    </div>
+    <div class="con" id="gana" style="background: linear-gradient(135deg, #6a5acd, #00bcd4);"> <!-- Purple to Cyan -->
+        <a href="{% url 'profile' %}" style="text-decoration:none;padding:5rem;color:white">Profile</a>
+    </div>
+    <div class="con" style="background: linear-gradient(135deg, #ffa500, #ff1493);"> <!-- Orange to Pink -->
+        About
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping when the window shrinks */
+        justify-content: center; /* Center the divs */
+        gap: 4rem; /* Consistent gap between divs */
+        margin: auto;
+        margin-top: 12rem;
+        padding: 1rem;
+        width: 90%; /* Adjust container width for responsiveness */
+    }
+
+    .con {
+        color: white;
+        border: solid 2px black;
+        flex: 1 1 calc(30% - 1rem); /* Responsive width */
+        max-width: calc(30% - 1rem); /* Ensure divs remain responsive */
+        aspect-ratio: 1 / 1; /* Makes the div a perfect square */
+        display: flex;
+        border-radius: 17px;
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        box-sizing: border-box; /* Include padding and border in size */
+        text-align: center; /* Center the text inside the div */
+        font-family: Arial, sans-serif; /* Clean font for better readability */
+        font-size: 1.2rem; /* Slightly larger font for visibility */
+        font-weight: bold; /* Make the text more prominent */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+        transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+    }
+
+    .con:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    }
+
+    /* Media query for small screens (mobile devices) */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* Stack divs vertically on small screens */
+            align-items: center; /* Center align stacked divs */
+        }
+
+        .con {
+            flex: 1 1 100%; /* Make divs take full width */
+            max-width: 100%;
+            aspect-ratio: 1 / 1; /* Maintain square shape */
+        }
+    }
+</style>
+
+{% endblock %}

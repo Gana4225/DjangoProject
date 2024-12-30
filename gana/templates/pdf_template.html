@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Results</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Phone</th>
+            <th>Marks</th>
+            <th>Status</th>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.rn }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.marks }}</td>
+            <td>{% if x.marks > 30 %}Pass{% else %}Fail{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
